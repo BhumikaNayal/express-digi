@@ -1,7 +1,10 @@
+import "dotenv/config";
 import express from "express";
+
 const app = express();
-const port = 3009;
+const port = process.env.PORT || 3009;
 app.use(express.json());
+
 let teaData = [];
 let nextId = 1;
 // add a new tea
